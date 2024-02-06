@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `bookings`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bookings` (
   `BookingID` int NOT NULL,
-  `Date` date DEFAULT NULL,
-  `TableNo` int DEFAULT NULL,
+  `BookingDate` date DEFAULT NULL,
+  `TableNumber` int DEFAULT NULL,
   `CustomerID` int DEFAULT NULL,
   `OrderID` int DEFAULT NULL,
   PRIMARY KEY (`BookingID`),
@@ -42,6 +42,7 @@ CREATE TABLE `bookings` (
 
 LOCK TABLES `bookings` WRITE;
 /*!40000 ALTER TABLE `bookings` DISABLE KEYS */;
+INSERT INTO `bookings` VALUES (1,'2022-10-10',5,NULL,NULL),(2,'2022-11-12',3,NULL,NULL),(3,'2022-10-11',2,NULL,NULL),(4,'2022-10-13',2,NULL,NULL);
 /*!40000 ALTER TABLE `bookings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,4 +214,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-05 10:20:26
+-- Dump completed on 2024-02-05 17:07:36
